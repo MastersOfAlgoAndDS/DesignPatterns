@@ -1,4 +1,4 @@
-package FactoryDesignPattern;
+package AbstractFactoryDesignPattern;
 
 public abstract class PizzaStore {
 	public abstract Pizza createPizza(String item);

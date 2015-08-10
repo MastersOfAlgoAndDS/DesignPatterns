@@ -1,4 +1,4 @@
-package FactoryDesignPattern;
+package AbstractFactoryDesignPattern;
 
 public class NewYorkCheesePizza extends Pizza {
 
