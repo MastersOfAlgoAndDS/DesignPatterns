@@ -14,7 +14,7 @@ public class Facade {
 	}
 
 	public void giveMoney(int withdrawAmount) {
-		if (acm.checkAccount() && cm.checkSecurityCode(code)
+		if (acm.checkAccount() && CodeManager.checkSecurityCode(code)
 				&& bm.checkBalance(withdrawAmount))
 			System.out.println("Withdraw Successful");
 		else
@@ -22,7 +22,7 @@ public class Facade {
 	}
 
 	public void putMoney(int depositAmount) {
-		if (acm.checkAccount() && cm.checkSecurityCode(code)
+		if (acm.checkAccount() && CodeManager.checkSecurityCode(code)
 				&& bm.deposit(depositAmount))
 			System.out.println("Deposit Successful");
 		else

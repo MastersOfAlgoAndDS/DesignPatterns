@@ -28,6 +28,9 @@ public class Singleton {
 		Singleton s = getSingleton();
 		s.print();
 		System.out.println(s);
+		Singleton t = getSingleton();
+		t.print();
+		System.out.println(t);
 
 	}
 }
