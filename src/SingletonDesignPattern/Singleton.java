@@ -6,12 +6,15 @@ public class Singleton {
 	private Singleton() {
 		if (single != null)
 			throw new RuntimeException(
-					"Exception: Cannot Initialize object using Reflection since object already created.");
+					"Exception: Cannot Initialize object using Reflection since object already created. To make the singleton safe from Java Reflection calls.");
 	}
 
 	public static Singleton getSingleton() {
 		if (single == null) {
+			// To make the block threadsafe so that each tread also gets same
+			// instance of singleton.
 			synchronized (Singleton.class) {
+
 				if (single == null) {
 					single = new Singleton();
 				}
